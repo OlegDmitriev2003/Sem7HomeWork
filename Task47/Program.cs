@@ -7,10 +7,11 @@ Console.Write("Введите число столбцов: ");
 int collumns = int.Parse(Console.ReadLine()!);
 double [,] numbers = new double [rows, collumns];
 for (int i = 0; i < rows; i++)
+{
     for (int n = 0; n < collumns; n++)
         {
             numbers [i,n] = Math.Round(new Random().NextDouble()*(end-begin)+begin, 2);
-            Console.WriteLine(numbers[i,n]);
+             Console.Write($" {numbers[i, n]} ");
         }
-
-
+    Console.WriteLine();
+}
